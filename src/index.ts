@@ -1,19 +1,19 @@
 import express from 'express';
 import cors from 'cors';
-import { config, validateConfig } from './config/index.js';
-import authRoutes from './routes/auth/index.js';
-import emailRoutes from './routes/email/index.js';
-import contactsRoutes from './routes/contacts/index.js';
-import compressRoutes from './routes/compress/index.js';
-import streakRoutes from './routes/streak.js';
-import themeRoutes from './routes/theme.js';
-import chatRoutes from './routes/chat.js';
-import subscriptionsRoutes from './routes/subscriptions.js';
-import quotaRoutes from './routes/quota.js';
-import progressRoutes from './routes/progress.js';
-import cleanupTaskRoutes from './routes/cleanup-task.js';
-import leaderboardRoutes from './routes/leaderboard.js';
-import avatarRoutes from './routes/avatar.js';
+import { config, validateConfig } from './shared/config/index.js';
+import authRoutes from './auth/http/auth.routes.js';
+import emailRoutes from './email/http/email.routes.js';
+import contactsRoutes from './contacts/http/contacts.routes.js';
+import compressRoutes from './compress/http/compress.routes.js';
+import streakRoutes from './streak/http/streak.routes.js';
+import themeRoutes from './theme/http/theme.routes.js';
+import chatRoutes from './chat/http/chat.routes.js';
+import subscriptionsRoutes from './subscriptions/http/subscriptions.routes.js';
+import quotaRoutes from './quota/http/quota.routes.js';
+import progressRoutes from './progress/http/progress.routes.js';
+import cleanupTaskRoutes from './cleanup-task/http/cleanup-task.routes.js';
+import leaderboardRoutes from './leaderboard/http/leaderboard.routes.js';
+import avatarRoutes from './avatar/http/avatar.routes.js';
 
 // Catch silent crashes
 process.on('uncaughtException', (err) => {
